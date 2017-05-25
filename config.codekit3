@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "25813",
 "files": {
+	"\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/.gitignore",
+		"oF": 0
+		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -6323,6 +6329,12 @@
 		"oAP": "\/build\/bower_components\/vue\/yarn.lock",
 		"oF": 0
 		},
+	"\/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/build\/build",
+		"oF": 0
+		},
 	"\/CNAME": {
 		"ft": 8192,
 		"oA": 2,
@@ -6375,7 +6387,7 @@
 	"displayValue": "Eyedentity",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-ceiling",
-	"lastBuiltDate": 517365572
+	"lastBuiltDate": 517367243
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -8312,21 +8324,21 @@
 	"languageDefaultsUserDefined": [
 		{
 			"autoOutputAction": 0,
-			"autoOutputPathFilenamePattern": "*.cshtml",
-			"autoOutputPathRelativePath": "",
-			"autoOutputPathReplace1": "",
-			"autoOutputPathReplace2": "",
-			"autoOutputPathStyle": 0,
-			"fileExtension": "cshtml"
-			},
-		{
-			"autoOutputAction": 0,
 			"autoOutputPathFilenamePattern": "*.asp",
 			"autoOutputPathRelativePath": "",
 			"autoOutputPathReplace1": "",
 			"autoOutputPathReplace2": "",
 			"autoOutputPathStyle": 0,
 			"fileExtension": "asp"
+			},
+		{
+			"autoOutputAction": 0,
+			"autoOutputPathFilenamePattern": "*.cshtml",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "cshtml"
 			}
 		],
 	"previewPathAddition": "",
