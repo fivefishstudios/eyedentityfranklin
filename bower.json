@@ -18,5 +18,8 @@
   "dependencies": {
     "materialize": "^0.98.2",
     "vue": "^2.3.3"
+  },
+  "devDependencies": {
+    "vue": "^2.3.3"
   }
 }

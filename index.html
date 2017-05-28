@@ -11,11 +11,22 @@
   <meta property="og:title" content="Welcome to Eyedentity Eyecare!"/>
   <meta property="og:image" content="/images/eyedentityFBPhoto.png"/>
   <meta property="og:site_name" content="Eyedentity Eyecare P.C"/>
-  <meta property="og:description" content="temporary description for Eyedentity Eyecare... this will be displayed on facebook pages
-  when somebody likes, recommend this page."/>
+  <meta property="og:description" content="temporary description for Eyedentity Eyecare... this will be displayed on facebook pages when somebody likes, recommend this page."/>
   <!-- to do: Add Twitter meta tags -->
   <!-- to do: Add iPhone icons -->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Adobe Typekit font -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'igh5toz',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- MaterializeCSS -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" >
   <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.css">
   <link rel="stylesheet" href="/css/eyedentity.css?v=052617">
   <!--[if lt IE 9]>
@@ -27,17 +38,158 @@
   <div class="container">
     <!-- Page Content goes here -->
     <header>
-        <div id="sitelogo" class="col s12 m3"><img src="/images/eyedentityLogo.png" class="responsive-img"></div>
-        <div id="sitenav" class="col m9 hide-on-small-only"><img src="/images/tmpMenu.png" class="responsive-img"></div>
+      <div id="sitelogo" class="col s12 m3"><img src="/images/eyedentityLogo.png" class="responsive-img"></div>
+      <div id="sitenav" class="col m9 hide-on-small-only"><img src="/images/tmpMenu.png" class="responsive-img"></div>
     </header>
 
-    <div id="heroshot">
-        <img src="/images/heroshot.png" class="responsive-img">
-    </div>
+    <section id="heroshot">
+      <img src="/images/heroshot.png" class="responsive-img">
+    </section>
 
-    <main>
-      <h1>Is this working????</h1> 
-      New update.... automatic update of content during save.
+    <main class="container">
+
+      <section id="missionstatement">
+        <div id="text"><em>Our mission is to provide state of the art eyecare<br>
+        using our experience and advanced equipment <br>
+        in a quiet, well managed and compassionate environment <br>
+        that promotes lifelong relationships.<br></em>
+        <a href="#">Learn more about us...</a></div>
+      </section>
+
+
+      <section id="products-services" class="row">
+        <div class="col m4 cell">
+          <img src="/images/people-icon.png">
+          <h2>Our Services</h2>
+          <p>We offer comprehensive eye exams,<br>
+          monitoring and preventive eye care<br>
+          for both adults and children<br>
+          <a href="#">Learn more...</a></p>
+        </div>
+
+        <div class="col m4 cell">
+          <img src="/images/shopcart-icon.png">
+          <h2>Our Products</h2>
+          <p>We carry the finest quality, top brands<br>
+          with the best warranties on our<br> 
+          frames and lenses<br>
+          <a href="#">Learn more...</a></p>
+        </div>
+
+        <div class="col m4 cell">
+          <img src="/images/mapmarker-icon.png">
+          <h2>Our Location</h2>
+          <p>Our modern office is located in Franklin,<br>
+          easily accessible for Williamson<br>
+          and Davidson county residents<br>
+          <a href="#">Learn more...</a></p>
+        </div>
+      </section>
+
+
+      <section id="testimonials">
+        <h2>What our Customers are saying...</h2>
+        <div id="stars"><img src="/images/star.png"><img src="/images/star.png"><img src="/images/star.png"><img src="/images/star.png"><img src="/images/star.png"></div>
+        <div id="customerprompts"><a href="#">Write a Review</a> &nbsp;|&nbsp; <a href="#">Join our Survey</a></div>
+
+        <div id="customercards">
+
+          <!-- start of first row -->
+          <div class="row"> 
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face-matt.png" class="circle photo">M. Perry
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face.png" class="circle photo">Jen A.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quisquam consequatur dolores provident nemo impedit exercitationem saepe, repellat sunt reprehenderit omnis ut adipisci cupiditate neque veritatis blanditiis, placeat fugit quia!</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face-erin.png" class="circle photo">Erin O.
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end of first row -->
+
+
+          <!-- start of second row -->
+          <div class="row"> 
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio. Recusandae ipsam non, repellat odio voluptas officia.</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face-jeff.png" class="circle photo">Jeff G.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face-olivia.png" class="circle photo">Olivia M.
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-content ">
+                  <p>I am a very simple card. I am good at containing..</p>
+                </div>
+                <div class="card-action">
+                  <img src="/images/face-courtney.png" class="circle photo">Courtney C.
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end of second row -->
+
+
+
+
+            
+        </div> <!-- customercards -->
+      </section> <!-- testimonials -->
+
+
+
+
+
+      <p>
+        Authentic distillery normcore, lumbersexual aliqua migas leggings umami post-ironic green juice.  Marfa thundercats sustainable in  occaecat, pinterest ennui la croix VHS crucifix ea vice deep v meggings.  Gluten-free cronut mumblecore, slow-carb chia qui  brooklyn bespoke seitan small batch ennui semiotics 3 wolf moon.  Gastropub put a bird on it lyft, nostrud butcher beard authentic freegan XOXO pariatur biodiesel locavore meggings bushwick unicorn.  Tofu sartorial palo santo blue bottle sed, raw denim direct trade  90's hammock gastropub.  Kickstarter banjo lomo, raw denim hammock hell of irure  humblebrag pariatur consectetur.  Flexitarian consectetur incididunt selvage, kinfolk nesciunt iceland cloud bread plaid aute  accusamus.
+      </p>
+
     </main>
 
 
@@ -49,6 +201,7 @@
 
 
   </div> <!-- end of main container -->
+  
   <!-- put scripts here -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/materialize/dist/js/materialize.js"></script>

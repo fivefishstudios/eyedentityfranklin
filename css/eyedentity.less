@@ -2,17 +2,35 @@
 // created: 5.26.17
 // author: ruel oquindo
 
+// materializecss overrides
+// ------------------------
+.container {
+  max-width: 1366px;
+}
+
+// start of custom css 
+// --------------------
 body{
-  background-color: teal;  // to do: change to gradient 
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#12899a+0,ffffff+87,ffffff+95,ffffff+100 */
+  background: #12899a; /* Old browsers */
+  background: -moz-linear-gradient(top,  #12899a 0%, #ffffff 87%, #ffffff 95%, #ffffff 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #12899a 0%,#ffffff 87%,#ffffff 95%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #12899a 0%,#ffffff 87%,#ffffff 95%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12899a', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  background-repeat: no-repeat;
+  font-family: "mr-eaves-xl-modern",sans-serif;
+  letter-spacing: 0.01em;
+  font-size: 1.45em;
 }
 
 header {
   background-color: #FFF;
   height: 78px;
+  overflow: hidden;
   #sitelogo {
     float: left;
-    margin-top: 5px;
-    margin-left: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
   }
   #sitenav {
     float: right;
@@ -20,26 +38,138 @@ header {
 }
 
 #heroshot {
+  background-color: #FFF;
   clear:both;
 }
 
 main {
   background-color: #FFF;
   min-height: 500px;
-  margin-top: -38px;
+  margin-top: -10px;
+  padding: 5px 10px 10px 10px;
+}
+
+
+#missionstatement {
+  display: table;
+  font-family: "mr-eaves-xl-modern",sans-serif;
+  height: 400px;
+  width: 100%;
+  a{
+    font-size:0.8em;
+    &:hover{
+      text-decoration: underline !important; 
+    }
+  }
+  #text{
+    display: table-cell;
+    font-size: 1.25em;
+    letter-spacing: 0.02em;
+    text-align: center;
+    vertical-align: middle;
+
+  }
+}
+
+
+#products-services{
+  background-color: #12899a;
+  color: #EEE;
+  // height: 460px;
+  text-align: center;
+  font-size: 0.95em;
+  font-weight: 300;
+  a{
+    color: #EEE;
+    &:hover{
+      color: #FFF;
+      text-decoration: underline;
+    }
+  }
+  h2{
+    font-size:1.9em;
+  }
+  .cell{
+    padding-top:50px;
+    padding-bottom: 50px;
+  }
+}
+
+#testimonials{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h2{
+    font-size:1.9em;
+    text-align: center;
+    color: #666;
+  }
+  #stars{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    img{
+      padding: 0px 3px 0px 3px;
+    }
+  }
+  #customerprompts{
+    text-align: center;
+    color: #CCC;
+  }
+  #customercards{
+    margin-top: 60px;
+    .card{
+      background-color: #F1F1F1;
+    }
+    .card-content{
+      height: 200px;
+      max-height: 200px;
+      overflow: auto;
+      font-size: 0.8em;
+    }
+  }
+  .photo{
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
 }
 
 
 
-
-
 // media query overrides
-// ----------------------------------
+// ---------------------
 
-// adjust margins for extra wide (lg) displays
-@media only screen and (min-width: 993px){
+// adjust margins for small (s) displays; i.e. mobile phone
+@media only screen and (min-width: 300px){
   .container {
-    width: 90%;
+    width: 100%;
+  }
+  #missionstatement {
+    #text{
+      font-size: 0.9em;
+    }
+  }
+  #products-services{
+    .cell{
+      width: 100%;
+    }
+  }
+} // min-width: 300px
+
+
+// adjust margins for medium (m) displays
+@media only screen and (min-width: 680px){
+  .container {
     max-width: 1366px;
   }
-} // end min-width: 993px
+  #missionstatement {
+    #text{
+      font-size: 1.25em;
+    }
+  }
+  #products-services{
+    .cell{
+      width: 33%;
+    }
+  }
+} // min-width: 680px
