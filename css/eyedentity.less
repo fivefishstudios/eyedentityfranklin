@@ -2,6 +2,8 @@
 // created: 5.26.17
 // author: ruel oquindo
 
+@themecolor: #12899a;
+
 // materializecss overrides
 // ------------------------
 .container {
@@ -139,6 +141,47 @@ main {
 }
 
 
+#location{
+  padding-top: 60px;
+  padding-bottom: 90px;
+  color: #666;
+  h2{
+    font-size:1.9em;
+    text-align: center;
+    color: #666;
+    margin-bottom: 80px;
+  }
+  #address{
+    h1{
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #444;
+      margin: 0px;
+    }
+    a {
+      color: @themecolor;
+    }
+    #emergencyinfo{
+      padding-bottom: 30px;
+    }
+    .emergency{
+      color: #d51922;
+    }
+    h3 {
+      margin: 0px;
+      font-size: 1.2em;
+      // padding-top: 6px;
+    }
+    .emergency-text{
+      font-size:0.7em;
+      color: #999;
+      margin-left: 53px;
+    }
+  }
+  #map{
+    height: 550px;
+  }
+}
 
 // media query overrides
 // ---------------------

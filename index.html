@@ -25,6 +25,8 @@
       h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
   </script>
+  <!-- font awesome -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <!-- MaterializeCSS -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" >
   <link rel="stylesheet" href="/bower_components/materialize/dist/css/materialize.css">
@@ -183,7 +185,44 @@
       </section> <!-- testimonials -->
 
 
+      <section id="location">
+        <h2>Location & Office Hours</h2>
+        <div class="row">
+          <div id="address" class="col s12 m12 offset-l1 l4">
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card darken-1">
+                  <div class="card-content">
+                    <h1>Eyedentity Eyecare</h1>
+                      <p>2176 Hillsboro Road, Suite 100<br>
+                      Franklin, TN 37069-6230<br>
+                      <i class="icon-phone"></i> <a href="tel:615.791.7030">615.791.7030</a><br>
+                      <i class="icon-envelope-alt"></i> <a href="mailto:info@eyedentityfranklin.com">info@eyedentityfranklin.com</a></p>
+                      <br>
+                      <p><i class="icon-calendar"></i> Mon-Fri: 8:00am - 5:00pm<br>
+                      <small>(We are closed for lunch 12:00pm - 1:00pm)</small><br>
+                      Sat-Sun: Closed</p>
+                  </div>
+                  <div class="card-action">
+                    <i class="icon-road"></i> <a href="#">Driving Directions</a>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- card -->
+          
+            <div id="emergencyinfo">
+              <i class="icon-plus-sign-alt icon-2x emergency left"></i> <a href="#"><h3 class="emergency">In Case of Emergency</h3></a>
+              <div class="emergency-text">Instructions in case of emergency during <br>
+                and after office-hours.</div>
+            </div>
+          </div> <!-- address -->
 
+
+          <div id="map" class="col s12 m12 offset-l1  l5">
+            google map
+          </div>
+        </div>
+      </section>
 
 
 
@@ -210,6 +249,27 @@
   <script src="/bower_components/materialize/dist/js/materialize.js"></script>
   <script src="/js/smoothScroll.js"></script>
   <script src="/js/app.js"></script>
+  <!-- Google Maps -->
+  <script>
+      var map;
+      function initMap() {
+        // lat/lng for Eyedentity Eyecare
+        var myLatLng = {lat: 35.9957665, lng: -86.885815};
+        // draw map showing this location
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng, 
+          zoom: 15
+        });
+        // drop location marker
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Eyedentity Eyecare'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0V0yDJBNvnaSVz3XCsm5Pyu91U144DcM&callback=initMap"
+    async defer></script>
   <!-- to do: Add Google Analytics JS code -->
 </body>
 </html>
