@@ -100,86 +100,46 @@
 
         <div id="customercards">
 
-          <!-- start of first row -->
+          <!-- start of row -->
           <div class="row"> 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face-matt.png" class="circle photo">M. Perry
-                </div>
-              </div>
-            </div>
 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face.png" class="circle photo">Jen A.
-                </div>
-              </div>
-            </div>
+            <user-review 
+              name="M. Perry" 
+              photo="/images/face-matt.png" 
+              review="In laudantium accusamus molestiae nisi, ipsam error eius. Temporibus commodi natus, velit, voluptatem, rerum quas repudiandae pariatur itaque, necessitatibus eius enim sint.">
+            </user-review>
 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quisquam consequatur dolores provident nemo impedit exercitationem saepe, repellat sunt reprehenderit omnis ut adipisci cupiditate neque veritatis blanditiis, placeat fugit quia!</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face-erin.png" class="circle photo">Erin O.
-                </div>
-              </div>
-            </div>
+            <user-review 
+              name="Jen A" 
+              photo="/images/face.png" 
+              review="The quick brown fox jumps. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio. ">
+            </user-review>
 
-          </div> <!-- end of first row -->
+            <user-review 
+              name="Erin O." 
+              photo="/images/face-erin.png" 
+              review="I am convenient because I require little markup to use effectively. Lorem ipsum dolor sit amet.">
+            </user-review>
 
+            <user-review 
+              name="Jeff G" 
+              photo="/images/face-jeff.png" 
+              review="The quick brown fox jumps. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio. The quick brown fox jumps. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio.The quick brown fox jumps. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio.">
+            </user-review>
 
-          <!-- start of second row -->
-          <div class="row"> 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam animi magnam, alias id, velit quia, molestiae asperiores ut impedit, culpa quas quis optio. Recusandae ipsam non, repellat odio voluptas officia.</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face-jeff.png" class="circle photo">Jeff G.
-                </div>
-              </div>
-            </div>
+            <user-review 
+              name="Olivia M" 
+              photo="/images/face-olivia.png" 
+              review="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Very good.">
+            </user-review>
 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively. I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face-olivia.png" class="circle photo">Olivia M.
-                </div>
-              </div>
-            </div>
+            <user-review 
+              name="Courtney C." 
+              photo="/images/face-courtney.png" 
+              review="Really excellent">
+            </user-review>
 
-            <div class="col s12 m4">
-              <div class="card">
-                <div class="card-content ">
-                  <p>I am a very simple card. I am good at containing..</p>
-                </div>
-                <div class="card-action">
-                  <img src="/images/face-courtney.png" class="circle photo">Courtney C.
-                </div>
-              </div>
-            </div>
-
-          </div> <!-- end of second row -->
+          </div> <!-- end of row -->
             
         </div> <!-- customercards -->
       </section> <!-- testimonials -->
@@ -219,7 +179,6 @@
 
 
           <div id="map" class="col s12 m12 offset-l1  l5">
-            google map
           </div>
         </div>
       </section>
@@ -248,28 +207,13 @@
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <script src="/bower_components/materialize/dist/js/materialize.js"></script>
   <script src="/js/smoothScroll.js"></script>
+  <!-- VueJS -->
+  <script src="https://unpkg.com/vue"></script>
+  <!-- my custom scripts -->
   <script src="/js/app.js"></script>
   <!-- Google Maps -->
-  <script>
-      var map;
-      function initMap() {
-        // lat/lng for Eyedentity Eyecare
-        var myLatLng = {lat: 35.9957665, lng: -86.885815};
-        // draw map showing this location
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng, 
-          zoom: 15
-        });
-        // drop location marker
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Eyedentity Eyecare'
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0V0yDJBNvnaSVz3XCsm5Pyu91U144DcM&callback=initMap"
-    async defer></script>
+  <script src="/js/eyedentitymap.js" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0V0yDJBNvnaSVz3XCsm5Pyu91U144DcM&callback=initMap" async defer></script>
   <!-- to do: Add Google Analytics JS code -->
 </body>
 </html>
