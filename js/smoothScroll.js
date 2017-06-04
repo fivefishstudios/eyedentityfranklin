@@ -1,17 +1,5 @@
   // smooth scrolling
   // credits: http://jsfiddle.net/y4swj2ts/3/
-  if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
-  window.onmousewheel = document.onmousewheel = wheel;
-
-  function wheel(event) {
-      var delta = 0;
-      if (event.wheelDelta) delta = event.wheelDelta / 120;
-      else if (event.detail) delta = -event.detail / 3;
-
-      handle(delta);
-      if (event.preventDefault) event.preventDefault();
-      event.returnValue = false;
-  }
 
   var goUp = true;
   var end = null;
@@ -21,13 +9,13 @@
     var animationInterval = 20; //lower is faster
     var scrollSpeed = 20; //lower is faster
 
-    if (end == null) {
+    if (end === null) {
       end = $(window).scrollTop();
     }
     end -= 20 * delta;
     goUp = delta > 0;
 
-    if (interval == null) {
+    if (interval === null) {
       interval = setInterval(function () {
         var scrollTop = $(window).scrollTop();
         var step = Math.round((end - scrollTop) / scrollSpeed);
@@ -43,3 +31,18 @@
       }, animationInterval);
     }
   }
+
+  function wheel(event) {
+      var delta = 0;
+      if (event.wheelDelta) {delta = event.wheelDelta / 120;}
+      else if (event.detail) {delta = -event.detail / 3;}
+
+      handle(delta);
+      if (event.preventDefault) {event.preventDefault();}
+      event.returnValue = false;
+  } 
+
+  if (window.addEventListener) {window.addEventListener('DOMMouseScroll', wheel, false);}
+  window.onmousewheel = document.onmousewheel = wheel;
+
+  

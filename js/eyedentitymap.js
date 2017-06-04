@@ -1,3 +1,6 @@
+// NOTE: Suppress the "variable" is defined but never used warning
+/* exported initMap */
+
 // google maps to create map and marker for Eyedentity Eyecare location
     var map;
     function initMap() {
